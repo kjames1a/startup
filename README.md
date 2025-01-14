@@ -19,9 +19,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 Have you ever been tempted by the adorable figures at Pop Mart but hesitated at the $15.99 price tag? Pop Cloud brings the same thrill of opening blind boxes to your screen –– for free! With Pop Cloud, you can collect virtual figures, experience the excitement of surprise, and share your collection with friends near and far, all without spending a dime.  
 
 ### Design
-![PopCloud_Design](https://github.com/user-attachments/assets/5b21d211-8386-4187-a525-a73a677c41f7)
-![PopCloud_Design2](https://github.com/user-attachments/assets/2c865f92-9b63-4fe8-993d-1a4bb783082e)
-![PopCloud_Design3](https://github.com/user-attachments/assets/37baa1ac-4886-484c-a45f-c8eb06c574c6)
+![PopCloud_Design](https://github.com/user-attachments/assets/a65c91f2-93d1-43bb-8de7-25c0c817815f)
+![PopCloud_Design2](https://github.com/user-attachments/assets/fcc4824a-3ff5-4719-885e-3c9e10851090)
+![PopCloud_Design3](https://github.com/user-attachments/assets/fa3dbaca-6e6a-4d2c-aed3-1f95a88a6500)
+
+
 
 Here is a sequence diagram of how users would interact with the backend to share their collections.
 
@@ -44,20 +46,24 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure login over HTTPS
+- Ability to select blind box collection
+- Randomization of selected collection
+- Ability to add to collection
+- Ability to view full collection
+- Ability to chat with friends
+- Share collection with friends
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Use correct HTML structure. Use HTML for all 5 pages: login, blind box selection, blind box reveal, figurine collection, and chatroom. Links will be used on the blind box reveal page and figurine  collection page.
+- **CSS** - Application styling that looks good on different size screens. Complementary colors that pass accessibility. Even spacing between collections. Links styled as buttons.
+- **React** - Provides login, collection display, adding figurine to collection, display full collection, share full collection, view friend's collection
+- **Service** - Backend service with endpoints for: login, saving figure to collection, and sharing collection with friends. Chatting with friends.  
+- **DB/Login** - Stores users, figures collections, and chats with friends in database. Register and login users. Credientials securely stored in database.
+- **WebSocket** - Chatting and sharing collection with friends.
 
 ## 🚀 AWS deliverable
 
