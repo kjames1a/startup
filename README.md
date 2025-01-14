@@ -61,7 +61,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Use correct HTML structure. Use HTML for all 5 pages: login, blind box selection, blind box reveal, figurine collection, and chatroom. Links will be used on the blind box reveal page and figurine  collection page.
 - **CSS** - Application styling that looks good on different size screens. Complementary colors that pass accessibility. Even spacing between collections. Links styled as buttons.
 - **React** - Provides login, collection display, adding figurine to collection, display full collection, share full collection, view friend's collection
-- **Service** - Backend service with endpoints for: login, saving figure to collection, and sharing collection with friends. Chatting with friends.  
+- **Service** - Backend service with endpoints for: login, saving figure to collection, and sharing collection with friends. The public API 'Gitter' will be used for the chatroom. 
 - **DB/Login** - Stores users, figures collections, and chats with friends in database. Register and login users. Credientials securely stored in database.
 - **WebSocket** - Chatting and sharing collection with friends.
 
