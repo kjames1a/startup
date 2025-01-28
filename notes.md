@@ -1,6 +1,6 @@
 # CS 260 Notes
 
-[My startup - Simon](https://simon.cs260.click)
+[My startup - Pop Depot](https://popdepot.click)
 
 ## Helpful links
 
@@ -10,8 +10,8 @@
 
 ## AWS
 
-My IP address is: 
-Launching my AMI I initially put it on a private subnet. Even though it had a public IP address and the security group was right, I wasn't able to connect to it.
+My IP address is: 52.22.153.238 
+
 
 ## Caddy
 
@@ -19,9 +19,7 @@ No problems worked just like it said in the [instruction](https://github.com/web
 
 ## HTML
 
-This was easy. I was careful to use the correct structural elements such as header, footer, main, nav, and form. The links between the three views work great using the `a` element.
-
-The part I didn't like was the duplication of the header and footer code. This is messy, but it will get cleaned up when I get to React.
+Did not run into any issues while creating HTML. Try to experiment with HTML a bit more. Maybe instead of using the table tag, study up on how to successfully make a div table. This would help with accessbility. The most difficult page to create was the Blind Boxes page. Collection page has brown lines acting as shelves. Will this have to change to CSS? The break tags will also need to be removed. 
 
 ## CSS
 
