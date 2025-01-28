@@ -75,7 +75,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - Built off of the simon html code. Wrote an additional page of HTML. 
+- [x] **HTML pages** - Five HTML pages: Home, Blind Box Selection, Collection, Chat, and About. Each page presents its respective layout and functionality.
 - [x] **Proper HTML element usage** - Each page has head, body, and footer. Header tags, table tags, div tags, and paragraph tags were used to format the rest of the pages.
 - [x] **Links** - Updated link names. All links can be accessed from every page. Created an additional link for the chat page.
 - [x] **Text** - The text describing the application on the 'About' page was updated. A description of what a blind box is has been added to the 'Blind Box' page.
