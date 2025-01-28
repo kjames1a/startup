@@ -75,15 +75,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - Five HTML pages: Home, Blind Box Selection, Collection, Chat, and About. Each page presents its respective layout and functionality.
+- [x] **Proper HTML element usage** - Each page has head, body, and footer. Header tags, table tags, div tags, and paragraph tags were used to format the rest of the pages.
+- [x] **Links** - Updated link names. All links can be accessed from every page. Created an additional link for the chat page.
+- [x] **Text** - The text describing the application on the 'About' page was updated. A description of what a blind box is has been added to the 'Blind Box' page.
+- [x] **3rd party API placeholder** - Created a page for the chatting API 'Gitter' to be used.
+- [x] **Images** - Change the image on the about.html page. Added in images of what the figures will be for the blind boxes and what it will look like on the shelves in the collection page. 
+- [x] **Login placeholder** - The login placeholder is located on the 'Home' page, in the index.html file.
+- [x] **DB data placeholder** - Database data will be used for managing users, figure collections, and chatting with friends. Specifically, the database placeholders are found in the login functionality, the 'Collection' page, and the 'Chat' page. The 'Collection' page will use database data to track which figures the user has received, and the 'Chat' page will use it to save friends and chat history.
+- [x] **WebSocket placeholder** - The WebSocket placeholder is on the'Chat' page. 
 
 ## 🚀 CSS deliverable
 
