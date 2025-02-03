@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# Simon
-
-[My Notes](notes.md)
-
-In 1978 Milton-Bradley, now Hasbro, released an electronic game named Simon. It was cutting edge at the time since there were so few electronic games, and all the cool kids had one.
-
-We are going to build a peer to peer multiplayer web application modeled after Simon. We will build it together by adding new functionality every time we learn a new technology. The example version of code and production deployment for each iteration are available to you. Your job will be to review the example and then deploy it to your production environment. The goal is to make you think about every line of code. Ask, "why is it done this way?" and "Is there a better way?". You can then take what you have learned, or even portions of the Simon code, and apply it to your Startup application.
-
-## 🚀 Specification Deliverable
-
-Simon is a simple game where you repeat a sequence of color flashes. The longer sequence you repeat the higher your score is.
-
-=======
 # Pop Depot
 
 Pop Depot is the online extension of the popular Pop Mart store. It brings the excitement of blind boxes to the digital world, featuring popular characters like Hirono, Nyota, and Inosoul. Collect virtual figurines, build your collection, and share with your friends, all in one platform. 
@@ -20,7 +6,6 @@ Pop Depot is the online extension of the popular Pop Mart store. It brings the e
 
 ## 🚀 Specification Deliverable
 
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] Proper use of Markdown
@@ -31,28 +16,6 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 ### Elevator pitch
 
-<<<<<<< HEAD
-A mind is a beautiful thing, but it needs stimulation. Lights, color, sound, and action. Simon give you hours of fun as you complete to remember the longest sequence of colors. See if you can top the charts with you efforts. Receive automatic notification of how your friends are doing.
-
-### Design
-
-![Design](designDiagram.png)
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-```mermaid
-sequenceDiagram
-    actor User
-    User->>Login: Enter login information
-    Login->>About: See about information
-    About-->>Login: Login
-    About->>About: Read inspirational quote
-    Login->>Play: Start game
-    Play->>Play: repeat sequences
-    Play->>Play: View other player's game notifications
-    Play-->>Login: Logout
-    Login-->>Scores: view high scores
-=======
 Have you ever been tempted by the adorable figures at Pop Mart but hesitated at the $15.99 price tag? Pop Cloud brings the same thrill of opening blind boxes to your screen –– for free! With Pop Cloud, you can collect virtual figures, experience the excitement of surprise, and share your collection with friends near and far, all without spending a dime.  
 
 ### Design
@@ -79,19 +42,10 @@ sequenceDiagram
     Frontend->>Backend: Log Sharing Activity
     Backend-->>Frontend: Confirm Share Logged
     Frontend-->>You: Display Share Confirmation
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 ```
 
 ### Key features
 
-<<<<<<< HEAD
-- Login, logout, and register
-- See high scores
-- Receive notifications for other player's achievements
-- Play by repeating color sequences
-- See a description of the app
-- Read inspirational quotes
-=======
 - Secure login over HTTPS
 - Ability to select blind box collection
 - Randomization of selected collection
@@ -99,53 +53,28 @@ sequenceDiagram
 - Ability to view full collection
 - Ability to chat with friends
 - Share collection with friends
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 
 ### Technologies
 
 I am going to use the required technologies in the following ways.
 
-<<<<<<< HEAD
-- **HTML** - Four different views, login/register controls, play, scoreboard, and about.
-- **CSS** - Complementary color scheme, responsive design, button highlighting during play.
-- **React** - Single page application with routing between views, reactive user controls, and state hooks.
-- **Service** - Endpoints for authentication, storing/retrieving scores. Third party call to get inspirational quotes.
-- **DB/Login** - Stores authentication and scores.
-- **WebSocket** - Broadcast user's game notifications.
-=======
 - **HTML** - Use correct HTML structure. Use HTML for all 5 pages: login, blind box selection, blind box reveal, figurine collection, and chatroom. Links will be used on the blind box reveal page and figurine  collection page.
 - **CSS** - Application styling that looks good on different size screens. Complementary colors that pass accessibility. Even spacing between collections. Links styled as buttons.
 - **React** - Provides login, collection display, adding figurine to collection, display full collection, share full collection, view friend's collection
 - **Service** - Backend service with endpoints for: login, saving figure to collection, and sharing collection with friends. The public API 'Gitter' will be used for the chatroom. 
 - **DB/Login** - Stores users, figures collections, and chats with friends in database. Register and login users. Credientials securely stored in database.
 - **WebSocket** - Chatting and sharing collection with friends.
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 
 ## 🚀 AWS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-<<<<<<< HEAD
-- [x] **Server deployed and accessible with custom domain name** - [My server link](https://simon.cs260.click).
-=======
 - [x] **Server deployed and accessible with custom domain name** - [My server link - Pop Depot](https://popdepot.click/).
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 
 ## 🚀 HTML deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-<<<<<<< HEAD
-- [x] **HTML pages** - Four different pages. One for each view. `index.html` (Login), `play.html`, `scores.html`, and `about.html`.
-- [x] **Proper HTML element usage** - I spent a lot of time learning about elements. I used header, footer, main, nav, img, a, fieldset, input, button, form, and many more.
-- [x] **Links** - Links between views.
-- [x] **Text** - About page has text.
-- [x] **3rd party API placeholder** - About page has a place to display an inspirational quote.
-- [x] **Images** - Image is displayed on the about page.
-- [x] **Login placeholder** - Placeholder for auth on the login page.
-- [x] **DB data placeholder** - High scores displayed on scores page.
-- [x] **WebSocket placeholder** - The play page has a text area that will show what other user notifications.
-=======
 - [x] **HTML pages** - Five HTML pages: Home, Blind Box Selection, Collection, Chat, and About. Each page presents its respective layout and functionality.
 - [x] **Proper HTML element usage** - Each page has head, body, nav, and footer. Header tags, table tags, div tags, and paragraph tags were used to format the rest of the pages.
 - [x] **Links** - Updated link names. All links can be accessed from every page. Created an additional link for the chat page and a link to directly share collection on the collection page.
@@ -155,20 +84,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Login placeholder** - The login placeholder is located on the 'Home' page, in the index.html file.
 - [x] **DB data placeholder** - Database data will be used for managing users, figure collections, and chatting with friends. Specifically, the database placeholders are found in the login functionality, the 'Collection' page, and the 'Chat' page. The 'Collection' page will use database data to track which figures the user has received, and the 'Chat' page will use it to save friends and chat history.
 - [x] **WebSocket placeholder** - The WebSocket placeholder is on the'Chat' page. 
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
 
 ## 🚀 CSS deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-<<<<<<< HEAD
-- [x] **Header, footer, and main content body** - I used a common CSS file to style these `main.css`. The views specific things are in `about.css` and `play.css`.
-- [x] **Navigation elements** - Bootstrap NavBar. What a time saver.
-- [x] **Responsive to window resizing** - Bootstrap and `display:flex' did most the work here. I'm really happy with the game rendering.
-- [x] **Application elements** - I used a lot of `display:flex` to get things to align correctly.
-- [x] **Application text content** - Set all my text to Helvetica and it looks nice and clean.
-- [x] **Application images** - I left the about image as is.
-=======
 - [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
 - [ ] **Navigation elements** - I did not complete this part of the deliverable.
 - [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
@@ -220,4 +140,3 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
 - [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
 - [ ] **Application is fully functional** - I did not complete this part of the deliverable.
->>>>>>> 55fe970821fd738f9532cbe73bb01a6b5c2569d5
