@@ -2,11 +2,20 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 375px;
+  background-color: rgb(208, 204, 195) !important;
+  font-family: 'Inter', sans-serif !important;
+  height: 100vh;
 }
 
 header {
+  font-family: 'Inter', sans-serif;
   flex: 0 80px;
+  justify-content: center;
+  align-items: center;
+  font-size: 30 px;
+  margin-top: 13px;
 }
+
 
 main {
   flex: 1 calc(100vh - 110px);
@@ -14,14 +23,18 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  background-image: url('background.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center
 }
 
 footer {
+  background-color: rgb(208, 204, 195) !important;
   flex: 0 30px;
 }
 
 menu {
-  flex: 1;
   display: flex;
   /*  overwrite Bootstrap so the menu does not wrap */
   flex-direction: row !important;
@@ -30,7 +43,12 @@ menu {
 
 .navbar-brand {
   padding-left: 0.3em;
-  border-bottom: solid rgb(182, 182, 182) thin;
+  font-size: 50 px;
+}
+
+.nav-item {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 menu .nav-item {
@@ -39,6 +57,57 @@ menu .nav-item {
 
 footer a {
   float: right;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+
+inter-custom {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.handdrawn-button {
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px black;
+  font-family: "Schoolbell", serif;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.secondary-handdrawn-button {
+  background-color: rgb(200, 200, 200);
+  border: 2px solid rgb(93, 92, 92);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px rgb(130, 130, 130);
+  font-family: "Schoolbell", serif;
+  padding: 10px 20px;
+}
+
+.input-group {
+  font-family: 'Handdrawn', sans-serif;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.schoolbell-regular {
+  font-family: "Schoolbell", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  width: 100%;
+  font-size: 40px;
 }
 
 @media (max-height: 600px) {
