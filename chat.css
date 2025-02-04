@@ -1,0 +1,41 @@
+schoolbell-header {
+    color:rgb(0, 0, 0);
+    font-family: "Schoolbell", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    width: 100%;
+    font-size: 40px;
+  }
+
+
+.handdrawn-button {
+    color: black; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin-top: 10px; 
+    padding: 10px 20px; 
+    background-color: #101010; 
+    border-radius: 5px; 
+  }
+  
+  .handdrawn-button:hover {
+    color: #000; 
+  }
+
+
+  .handdrawn {
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 0 #000;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .handdrawn:focus {
+    box-shadow: 4px 4px 0 #000;
+  }

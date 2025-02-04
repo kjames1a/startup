@@ -6,44 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat HTML</title>
     <link rel="icon" href="favicon.ico" />
-  </head>
-  <body>
-    <header>
-      <h1>Pop Depot<sup></sup></h1>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fxaeberhard.github.io/handdrawn.css/handdrawn.css">
 
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="BlindBoxes.html">Blind Boxes</a></li>
-          <li><a href="Collection.html">Figurine Collection</a></li>
-          <li><a href="chat.html">Chat</a></li>
-          <li><a href="about.html">About</a></li>
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="text-black-50">
+    <header class="container-fluid">
+      <h2 class="schoolbell-regular"; href="#" style="margin-top: 15px;">Pop Depot</h2>
+      <nav class="navbar fixed-top navbar-light d-flex justify-content-center">
+        <div class="container d-flex justify-content-center">
+        <menu class="navbar-nav d-flex flex-row justify-content-center w-100">
+          <li class="nav-item">
+            <a class=" nav-link schoolbell-regular" href="index.html" style="font-size: 30px; margin-bottom: 50px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link schoolbell-regular" href="BlindBoxes.html" style="font-size: 30px;">Blind Boxes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link schoolbell-regular " href="Collection.html" style="font-size: 30px;">Figurine Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active schoolbell-regular" href="chat.html" style="font-size: 30px;">Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link schoolbell-regular" href="about.html" style="font-size: 30px;">About</a>
+          </li>
         </menu>
       </nav>
-      <hr />
     </header>
 
     <main>
-      <h1>Chat</h1>
+      <h1 class="schoolbell-header" style="text-align: center;">Chat</h1>
       <p>Here is the Database placeholder</p>
       <p>Here is the Websocket placeholder</p>
       <div><input type="text" placeholder="Search for friend" />
-        <button type="submit">Search</button></div>
-        <!-- remove breaks and put in margin spacing -->
-        <br>
-        <br> 
-        <br>
-        <div>
-          <input type="text" placeholder="Type Message Here" />
-          <button type="submit">Send</button>
+        <button class="handdrawn-button" type="submit">Search</button></div>
+          <input class="handdrawn" type="text" placeholder="Type Message Here" />
+          <button class="handdrawn-button" type="submit">Send</button>
         </div>
       </form>
     </main>
 
     <footer>
-      <hr />
       <span class="text-reset">Karly James</span>
-      <br />
       <a href="https://github.com/kjames1a/startup/tree/main">GitHub</a>
     </footer>
   </body>
