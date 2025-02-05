@@ -1,4 +1,4 @@
-schoolbell-header {
+.schoolbell-header {
     color:rgb(0, 0, 0);
     font-family: "Schoolbell", serif;
     font-weight: 400;
@@ -14,8 +14,8 @@ schoolbell-header {
     text-decoration: none; 
     display: inline-block; 
     margin-top: 10px; 
-    padding: 10px 20px; 
-    background-color: #101010; 
+    padding: 5px 10px; 
+    background-color: #dbd7d7; 
     border-radius: 5px; 
   }
   
@@ -23,19 +23,38 @@ schoolbell-header {
     color: #000; 
   }
 
-
-  .handdrawn {
-    font-family: 'Schoolbell', cursive;
-    font-size: 1.2em;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 2px 2px 0 #000;
+  .input-text {
+    font-family: 'Schoolbell';
+    padding: 0.2rem 0.4rem;
+    color: #717171;
+    background: transparent;
+    align-self: center;
     outline: none;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .handdrawn:focus {
-    box-shadow: 4px 4px 0 #000;
-  }
+    border: 2px solid #919090;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    width: 100%;
+    max-width: 400px; 
+    height: 40px; 
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.input-container .input-text {
+  margin-right: 10px; 
+}
+
+.chat-square {
+  padding: 0.2rem 0.4rem;
+    color: #717171;
+    background: rgba(255, 255, 255, 0.638);
+    align-self: center;
+    outline: none;
+    border: 2px solid #919090;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    width: 100%;
+    max-width: 300px; 
+    height: 300px; 
+}
