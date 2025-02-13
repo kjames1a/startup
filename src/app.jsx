@@ -12,7 +12,7 @@ import { Chat } from './chat/chat';
 export default function App() {
   return (
     <BrowserRouter>
-    <div className="body bg-dark text-light"> 
+    <div className="body bg-light text-dark"> 
         <header className="container-fluid">
         <h2 className="schoolbell-regular" style={{ marginTop: '15px' }}>Pop Depot</h2>
         <nav className="navbar navbar-expand-lg fixed-top navbar-light d-flex justify-content-center">
