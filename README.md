@@ -101,7 +101,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **Bundled using Vite** - I completed bundling with Vite.
-- [x] **Components** - Login and chat are all components with mocks for login and WebSocket. Selecting the sign in and register buttons will bring the user to the 'Blind Boxes' page. The collection page is showing the database that will store what figures users receive from the blind boxes. The chat page has placeholders for where the websocket will be used and placed.
+- [x] **Components** - Login and Chat are both components with mock implementations for login and WebSocket. Selecting the Sign In and Register buttons will navigate the user to the 'Blind Boxes' page. The Collection page displays the database where figures obtained from blind boxes will be stored. The Chat page contains placeholders for where the WebSocket functionality will be implemented.
 - [x] **Router** - Routing between login and blind boxes components as well as routing between collection and chat.
 
 ## 🚀 React part 2: Reactivity
