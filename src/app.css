@@ -63,6 +63,8 @@ footer a {
 }
 
 .handdrawn-button {
+  color: black; 
+  text-decoration: none; 
   background-color: #f0f0f0;
   border: 2px solid black;
   border-radius: 10px;
@@ -75,6 +77,8 @@ footer a {
 }
 
 .secondary-handdrawn-button {
+  color: black; 
+  text-decoration: none;
   background-color: rgb(200, 200, 200);
   border: 2px solid rgb(93, 92, 92);
   border-radius: 10px;

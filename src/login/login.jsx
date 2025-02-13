@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 export function Login() {
   return (
@@ -14,8 +15,8 @@ export function Login() {
           <span className="input-group-text"><img src="lock.png" width="18"></img></span>
           <input className="form-control" type="password" placeholder="password" />
         </div>
-        <button type="submit" style={{ marginRight: "15px" }} className="handdrawn-button"> Sign in </button>
-        <button type="submit" className="secondary-handdrawn-button">Register</button>
+        <NavLink type="submit" style={{ marginRight: "15px" }} className="handdrawn-button" to="/blindboxes">Sign in</NavLink>
+        <NavLink type="submit" style={{ marginRight: "15px" }} className="secondary-handdrawn-button" to="/blindboxes">Register</NavLink>
       </form>
     </div>
   </main>
