@@ -27,7 +27,7 @@ Making one change often affected the entire page, but Bootstrap helped keep ever
 
 ## React Part 1: Routing
 
-Some ways of coding that works in css does not transfer well into react. It needs a specific sytax for style. 
+Some ways of coding that works in css does not transfer well into react. It needs a specific sytax for style. React has also helped me to find areas where I never had a closing tag. Do not have multiple of the same css styles stored in different css files. This created a lot of breaks through out the app. React helped me to see a lot of issues that I had in my HTML and CSS. Implementing React would have been a lot easier if I did everything correctly from the start, but I guess that is the process of learning.
 
 ## React Part 2: Reactivity
 
