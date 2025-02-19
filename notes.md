@@ -31,6 +31,13 @@ Some style of coding that works in css does not transfer well into react. Such a
 
 ## React Part 2: Reactivity
 
+Important notes from reading:
+-Use 'let' or 'const' to define variables. 
+-Use strict equality in your code.
+-Have to internationalization startup?
+-Long running, or blocking tasks, should be executed with the use of a JavaScript Promise.
+-Hooks must be called at the top scope of the function and cannot be called inside of a loop or conditional. This restriction ensures that hooks are always called in the same order when a component is rendered.
+
 This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
 
 Handling the toggling of the checkboxes was particularly interesting.
