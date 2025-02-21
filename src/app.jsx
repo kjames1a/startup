@@ -1,15 +1,19 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './app.css';
-
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { BlindBoxes } from './blindboxes/blindboxes';
 import { Collection } from './collection/collection';
 import { About } from './about/about';
 import { Chat } from './chat/chat';
+import { AuthState } from './login/authstate';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
 
-export default function App() {
+function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
   return (
     <BrowserRouter>
     <div className="body bg-light text-dark"> 
@@ -45,8 +49,21 @@ export default function App() {
         </header>
 
         <Routes>
-            <Route path='/' element={<Login />} exact />
-            <Route path='/blindboxes' element={<BlindBoxes />} />
+          <Route
+            path='/'
+            element={
+              <Login
+                userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}
+              />
+            }
+            exact
+          />
+            <Route path='/blindboxes' element={<BlindBoxes userName={userName} />} />
             <Route path='/chat' element={<Chat />} />
             <Route path='/collection' element={<Collection />} />
             <Route path='/about' element={<About />} />
@@ -65,8 +82,8 @@ export default function App() {
 }
 
 
-
-
 function NotFound() {
     return <main className="container-fluid bg-secondary text-center">404: Return to sender. Address unknown.</main>;
-  }
+}
+
+export default App;
