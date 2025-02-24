@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
-import { BlindBoxes } from './blindboxes/blindboxes';
+import { BlindBoxes } from './blindboxes/BlindBoxes';
 import { Collection } from './collection/collection';
 import { About } from './about/about';
 import { Chat } from './chat/chat';
-import { AuthState } from './login/authstate';
+import { SelectedBlindBox } from './blindboxes/selectedBlindBox';
+import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
@@ -48,6 +49,7 @@ function App() {
         </nav>
         </header>
 
+   
         <Routes>
           <Route
             path='/'
@@ -64,11 +66,14 @@ function App() {
             exact
           />
             <Route path='/blindboxes' element={<BlindBoxes userName={userName} />} />
+            <Route path="/" element={<BlindBoxes />} />
+            <Route path="/selected-blind-box" element={<SelectedBlindBox />} />
             <Route path='/chat' element={<Chat />} />
             <Route path='/collection' element={<Collection />} />
             <Route path='/about' element={<About />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
+
 
         <footer className="text-dark-50">
         <div className="container-fluid">
