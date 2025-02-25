@@ -7,6 +7,7 @@ import { About } from './about/about';
 import { Chat } from './chat/chat';
 import { SelectedBlindBox } from './blindboxes/selectedBlindBox';
 import { AuthState } from './login/authState';
+import { FigureStorageProvider } from './collection/figureStorage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
@@ -16,6 +17,7 @@ function App() {
     const [authState, setAuthState] = React.useState(currentAuthState);
 
   return (
+    < FigureStorageProvider>
     <BrowserRouter>
     <div className="body bg-light text-dark"> 
         <header className="container-fluid">
@@ -53,7 +55,7 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={
+              element={
               <Login
                 userName={userName}
                 authState={authState}
@@ -66,11 +68,11 @@ function App() {
             exact
           />
             <Route path='/blindboxes' element={<BlindBoxes userName={userName} />} />
-            <Route path="/" element={<BlindBoxes />} />
             <Route path="/selected-blind-box" element={<SelectedBlindBox />} />
             <Route path='/chat' element={<Chat />} />
             <Route path='/collection' element={<Collection />} />
             <Route path='/about' element={<About />} />
+            <Route path='FigureStorageProvider' element={<FigureStorageProvider />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
 
@@ -83,6 +85,7 @@ function App() {
         </footer>
     </div>
     </BrowserRouter>
+    </FigureStorageProvider>
     );
 }
 

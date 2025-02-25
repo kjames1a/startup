@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useCollection } from './figureStorage';
 import './collection.css';
 
 export function Collection() {
+  const { collection } = useCollection();
+
   return (
     <main>
       <h2 className="schoolbell-regular" style={{ textAlign: "center", marginBottom: "40px", color: "black" }}>
@@ -10,18 +13,23 @@ export function Collection() {
       </h2>
       <div className="shelf">
         <div className="figures">
-          <div className="figure">
-            <img src="Nyota_1.png" alt="Nyota" />
-          </div>
-          <div className="figure">
-            <img src="Hirono_draw.png" alt="Hirono" />
-          </div>
-          <div className="figure">
-            <img src="Inosoul_4.png" alt="Inosoul" />
-          </div>
+          {collection.length === 0 ? (
+            <p style={{ textAlign: "center", color: "gray" }}>No figures collected yet!</p>
+          ) : (
+            collection.map((figure, index) => (
+              <div className="figure" key={index}>
+                <img src={figure.image} alt={figure.name} />
+                <p>{figure.name}</p>
+                <button className='remove-button' onClick={() => removeFigure(index)}>Remove</button>
+                </div>
+            ))
+          )}
         </div>
       </div>
+      <div className='link-container'>
+      <NavLink className="fig-handdrawn-button" to="/blindboxes">Return to Blind Boxes</NavLink>
       <NavLink className="fig-handdrawn-button" to="/chat">Share collection with friends</NavLink>
+      </div>
     </main>
   );
 }

@@ -129,3 +129,24 @@ p {
 .handdrawn-button:hover {
   color: #000; 
 }
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.remove-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.remove-button:hover {
+  background-color: darkred;
+}
