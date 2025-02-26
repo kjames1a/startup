@@ -19,8 +19,8 @@ export function Collection() {
             collection.map((figure, index) => (
               <div className="figure" key={index}>
                 <img src={figure.image} alt={figure.name} />
-                <p>{figure.name}</p>
-                <button className='remove-button' onClick={() => removeFigure(index)}>Remove</button>
+                {/* <p>{figure.name}</p> */}
+                {/* <button className='remove-button' onClick={() => removeFigure(index)}>Remove</button> */}
                 </div>
             ))
           )}
