@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import './about.css';
+import Accordion from 'react-bootstrap/Accordion';
 
 export function About() {
+  const [activeKey, setActiveKey] = useState('');
+
+  useEffect (() => {
+    if (activeKey !== '') {
+      const timer = setTimeout(() => {
+        setActiveKey('')
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [activeKey]
+);
+
+
   return (
     <main>
        <div className=" "
@@ -24,11 +39,35 @@ export function About() {
       </p>
       </div>
 
-      <h2 className="schoolbell-header" style={{textAlign: "center"}}>Commonly Asked Questions</h2>
-      <details><summary className="schoolbell-para">How do get a blind box?</summary>Click on the collection that you want</details>
-      <details><summary className="schoolbell-para">Can I trade the figurine that I got?</summary>No.</details>
-      <details><summary className="schoolbell-para">How do I chat with my friend?</summary>........</details>
-      <details><summary className="schoolbell-para">What if I did not get the figure that I wanted?</summary>Try again.</details>
+    <Accordion style={{width:'600px'}}activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>What is Pop Depot?</Accordion.Header>
+        <Accordion.Body>
+          Pop Depot is the online version of the store Pop Mart.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>How do I chat with my friends?</Accordion.Header>
+        <Accordion.Body>
+          Navigate to the 'Chat' page and search the friend you wish to chat with.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>How do I get a blind box?</Accordion.Header>
+        <Accordion.Body>
+          Navigate to the 'Blind Box' page and select a blind box from a collection.
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="3">
+        <Accordion.Header>Does it cost anything to use Pop Depot?</Accordion.Header>
+        <Accordion.Body>
+          Pop Depot is a free service!
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
     </main>
   );
 }
+
+export default About;
+
