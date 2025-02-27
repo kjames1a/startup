@@ -108,8 +108,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - Everything is working. The 'chat' page is mocked out for the websocket implementation. 
+- [x] **Hooks** - Used 'useState' on all pages. 'useEffect' is used on the 'Chat' and 'About' page.
 
 ## 🚀 Service deliverable
 
