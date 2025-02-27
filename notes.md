@@ -32,32 +32,15 @@ Some style of coding that works in css does not transfer well into react. Such a
 ## React Part 2: Reactivity
 
 Important notes from reading:
--Use 'let' or 'const' to define variables. 
+
+-Use 'let' or 'const' to define variables.
+
 -Use strict equality in your code.
+
 -Have to internationalization startup?
+
 -Long running, or blocking tasks, should be executed with the use of a JavaScript Promise.
+
 -Hooks must be called at the top scope of the function and cannot be called inside of a loop or conditional. This restriction ensures that hooks are always called in the same order when a component is rendered.
 
-This was a lot of fun to see it all come together. I had to keep remembering to use React state instead of just manipulating the DOM directly.
-
-Handling the toggling of the checkboxes was particularly interesting.
-
-```jsx
-<div className="input-group sound-button-container">
-  {calmSoundTypes.map((sound, index) => (
-    <div key={index} className="form-check form-switch">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value={sound}
-        id={sound}
-        onChange={() => togglePlay(sound)}
-        checked={selectedSounds.includes(sound)}
-      ></input>
-      <label className="form-check-label" htmlFor={sound}>
-        {sound}
-      </label>
-    </div>
-  ))}
-</div>
-```
+Fun to see it working! Need to fix a few of the images as they do not sit correctly on the shelf. Thinking of adding a few more features to the collection page such as a remove button and maybe a max amount of figurines.
