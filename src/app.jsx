@@ -8,6 +8,7 @@ import { Chat } from './chat/chat';
 import { SelectedBlindBox } from './blindboxes/selectedBlindBox';
 import { AuthState } from './login/authState';
 import { FigureStorageProvider } from './collection/figureStorage';
+import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
