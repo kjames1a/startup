@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCollection } from '/src/collection/figureStorage';
 import { SelectedBlindBox } from './selectedBlindBox';
 import Button from 'react-bootstrap/Button';
 import './BlindBoxes.css';
@@ -9,6 +10,7 @@ export function BlindBoxes() {
   const [selectedbox, setSelectedBox] = useState(null);
   const [selectedbutton, setSelectedButton] = useState(null);
   const navigate = useNavigate();
+
 
   const hironoBlindBoxes = [
     { image: 'Hirono_1_draw.png', name: "Hirono 1" },
@@ -41,7 +43,7 @@ export function BlindBoxes() {
   const handleSelection = (boxNumber, blindboxCollections) => {
     const box = randombox(blindboxCollections); 
     setSelectedBox(box);
-    setSelectedButton(boxNumber);
+    setSelectedButton(boxNumber); 
     navigate("/selected-blind-box", { state: { box } }); 
   };
 
