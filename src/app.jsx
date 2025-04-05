@@ -4,10 +4,7 @@ import { Login } from './login/login';
 import { BlindBoxes } from './blindboxes/BlindBoxes';
 import { Collection } from './collection/collection';
 import { About } from './about/about';
-import { Chat } from './chat/chat';
-import { SelectedBlindBox } from './blindboxes/selectedBlindBox';
-import { AuthState } from './login/authState';
-import { FigureStorageProvider } from './collection/figureStorage';
+import { AuthState } from './login/authstate';
 import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
@@ -18,7 +15,6 @@ function App() {
     const [authState, setAuthState] = React.useState(currentAuthState);
 
   return (
-    < FigureStorageProvider>
     <BrowserRouter>
     <div className="body bg-light text-dark"> 
         <header className="container-fluid">
@@ -35,13 +31,10 @@ function App() {
                 <NavLink className=" nav-link schoolbell-regular" to="/" style={{ fontSize: '30px', marginBottom: '50px' }}>Home</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link schoolbell-regular" to="BlindBoxes" style={{ fontSize: '30px'}}>Blind Boxes</NavLink>
+                <NavLink className="nav-link schoolbell-regular" to="blindboxes" style={{ fontSize: '30px'}}>Blind Boxes</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link schoolbell-regular " to="Collection" style={{ fontSize: '30px'}}>Figurine Collection</NavLink>
-            </li>
-            <li className="nav-item">
-                <NavLink className="nav-link schoolbell-regular" to="chat" style={{ fontSize: '30px'}}>Chat</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link schoolbell-regular" to="about" style={{ fontSize: '30px'}}>About</NavLink>
@@ -69,11 +62,8 @@ function App() {
             exact
           />
             <Route path='/blindboxes' element={<BlindBoxes userName={userName} />} />
-            <Route path="/selected-blind-box" element={<SelectedBlindBox />} />
-            <Route path='/chat' element={<Chat />} />
             <Route path='/collection' element={<Collection />} />
             <Route path='/about' element={<About />} />
-            <Route path='FigureStorageProvider' element={<FigureStorageProvider />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
 
@@ -86,7 +76,6 @@ function App() {
         </footer>
     </div>
     </BrowserRouter>
-    </FigureStorageProvider>
     );
 }
 
