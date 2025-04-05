@@ -12,13 +12,13 @@ export function Authenticated(props) {
     fetch('/api/auth/logout', {
       method: 'delete',
     })
-    .catch(() => {
-      // Logout failed. Assuming offline
-    })
-    .finally(() => {
-      localStorage.removeItem('userName');
-      props.onLogout();
-    });
+      .catch(() => {
+        // Logout failed. Assuming offline
+      })
+      .finally(() => {
+        localStorage.removeItem('userName');
+        props.onLogout();
+      });
   }
 
   return (
