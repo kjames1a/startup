@@ -4,6 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 export function About() {
   const [activeKey, setActiveKey] = useState('');
+  const [videos, setVideos] = useState([]);
 
   useEffect (() => {
     if (activeKey !== '') {
@@ -14,6 +15,22 @@ export function About() {
     }
   }, [activeKey]
 );
+
+  useEffect (() => {
+    const YOUTUBE_API_KEY = 'AIzaSyCd2iKjqQ9nghmWXb73iH4G8HEJaIz1Mgw'
+    const PLAYLIST_KEY = 'PLoQMv6PnjvrYicMqfFtT4QVgZMXh6OJBR'
+    const vid_amount = 2;
+
+    fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${vid_amount}&playlistId=${PLAYLIST_KEY}&key=${YOUTUBE_API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => {
+      const vids = data.items.map(item => ({
+      title: item.snippet.title,
+      videoId: item.snippet.resourceId.videoId
+    }));
+    setVideos(vids);
+  });
+  })
 
 
   return (
@@ -36,6 +53,14 @@ export function About() {
         The use of the name, figures, and related content is strictly for non-profit educational purposes only. 
         No part of this code or program may be used outside of that definition.
       </p>
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '2rem 0' }}>
+        {videos.map((video, index) => (
+          <iframe key={index} width="560" height="315" src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0`}
+            allow="autoplay; encrypted-media" allowFullScreen title={video.title}
+          />
+        ))}
       </div>
 
     <Accordion style={{width:'600px'}}activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
@@ -69,4 +94,6 @@ export function About() {
 }
 
 export default About;
+
+
 
