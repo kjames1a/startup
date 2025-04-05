@@ -1,5 +1,5 @@
 {
-  "name": "simon-service",
+  "name": "popdepot",
   "version": "1.0.0",
   "description": "This demonstrates a service for a web application.",
   "main": "index.js",
@@ -9,14 +9,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "axios": "^1.8.3",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.12.1",
-    "socket.io": "^4.8.1",
-    "socket.io-client": "^4.8.1",
-    "talkjs": "^0.34.0",
+    "mongodb": "^6.15.0",
     "uuid": "^11.0.5"
   }
 }
