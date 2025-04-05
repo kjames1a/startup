@@ -9,8 +9,8 @@ const figureCollection = db.collection('figure');
 
 // This will asynchronously test the connection and exit the process if it fails
 async function testConnection() {
+  await client.connect();
   try {
-    await client.connect();
     await db.command({ ping: 1 });
     console.log(`Connect to database`);
   } catch (ex) {
@@ -18,26 +18,6 @@ async function testConnection() {
     process.exit(1);
   }
 }
-
-async function addUser(user) {
-  try {
-  const result = await userCollection.insertOne(user);
-  console.log("user inserted", result.insertedId);
-} catch (error) {
-  console.error("Error adding user", error);
-} 
-}
-
-async function main() {
-  try {
-  const blindBoxes = await getBlindBoxes();
-  console.log("Retrived Blindboxes", blindBoxes);
-  } catch (error) {
-    console.error("error fetching", error);
-  } finally {
-    client.close();
-  }
-  }
 
 function getUser(email) {
   return userCollection.findOne({ email: email });
@@ -55,15 +35,9 @@ async function updateUser(user) {
   await userCollection.updateOne({ email: user.email }, { $set: user });
 }
 
-async function addFigure(figure) {
-  return figureCollection.insertOne(figure);
+async function addBlindBox(blindBox) {
+  return figureCollection.insertOne(blindBox);
 }
-
-// db.figure.insertMany([
-//   {figure: {name:"Hirono" , image:"Hirono_1_draw.png" }},
-//   {figure: {name:"Inosoul" , image:"Inosoul-1.png" }},
-//   {figure: {name:"Nyota" , image:"Nyota-1.png" }}
-// ])
 
 async function getBlindBoxes() {
   const query = { "figure.image": { $exists: true } };
@@ -75,13 +49,29 @@ async function getBlindBoxes() {
   return cursor.toArray();
 }
 
-main();
+async function updateCollection(newFigure) {
+  const result = await figureCollection.insertOne(newFigure);
+  return {
+    _id: result.insertedId, 
+    ...newFigure
+  };
+}
+
+async function getCollectionFigures(token) {
+  const user = await getUserByToken(token);  
+  if (user) {
+    return await figureCollection.find({ name: user.email }).toArray();
+  }
+  return [];
+}
 
 module.exports = {
   getUser,
   getUserByToken,
   addUser,
   updateUser,
-  addFigure,
+  addBlindBox,
   getBlindBoxes,
+  updateCollection,
+  getCollectionFigures,
 };
