@@ -1,7 +1,7 @@
 import React from 'react';
 import { Unauthenticated } from './unauthenticated';
 import { Authenticated } from './authenticated';
-import { AuthState } from './authState';
+import { AuthState } from './authstate';
 
 
 export function Login({ userName, authState, onAuthChange }) {
@@ -9,7 +9,6 @@ export function Login({ userName, authState, onAuthChange }) {
     <main className='container-fluid bg-secondary text-center'>
       <div>
         {authState === AuthState.Unauthenticated && <h1 className="schoolbell-regular">Sign in or Register</h1>}  
-        {/* {authState !== AuthState.Unknown && <h1>Sign in or Register</h1>} */}
         {authState === AuthState.Authenticated && (
           <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
         )}
