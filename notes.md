@@ -48,3 +48,6 @@ Fun to see it working! Need to fix a few of the images as they do not sit correc
 ## Service
 
 I did not do much research on my third party and thought it implemented everything that I wanted. When adding new third parties for the future, I plan on doing more research to make sure that the third party has all features needed. Following the Simon Service was helpful as I was able to see more what the code was doing and how to use apis and fetchs.
+
+## Database
+When finding a MongoDB database, the property names used must match the field names defined in the schema.
