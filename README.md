@@ -116,7 +116,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I added backend endpoints that receives selected blindboxes and returns the blindboxes to the collections page.
 - [x] **Node.js/Express HTTP service** - HTTP services can be seen in the index.js code implementing get, delete, and post.
 - [x] **Static middleware for frontend** - Static middleware for frontend implentation can be found in the index.js code.
-- [x] **Calls to third party endpoints** - Call to the third party can be found on the chat page. This third party will be switched to a new one that will work with Mongodb. The current third party is functioning, however, it needs a room ID and requires all users to sign up with the api provider, which makes it difficult for users to use, hence the need for a change. For testing purposes the following room ID, !LAJWFNBbLmIlHUXtJs:gitter.im, gives access to a room I created. 
+- [x] **Calls to third party endpoints** - A call to a third party service is made on the About page. The service used is YouTube, which utilizes a YouTube API key to pull videos from a playlist.
 - [x] **Backend service endpoints** - Placeholders for login that stores the current user on the server. Endpoints added for adding new blind boxes to the collection.
 - [x] **Frontend calls service endpoints** - Used fetch to connect the frontend to the endpoints.
 
