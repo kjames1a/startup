@@ -124,12 +124,11 @@ For this deliverable I added backend endpoints that receives selected blindboxes
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - I did not complete this part of the deliverable.
-- [ ] **User login and logout** - I did not complete this part of the deliverable.
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
-
+- [x] **User registration** - Users are able to register. Registration information is successfully stored in MongoDB.
+- [x] **User login and logout** - Once registered, users are able to log in and out.
+- [x] **Stores data in MongoDB** - Selected blindboxes are added to a collection, allowing users to view them later. This data is stored in MongoDB. 
+- [x] **Stores credentials in MongoDB** - User emails and hashed passwords are securely stored in MongoDB.
+- [x] **Restricts functionality based on authentication** - Unregistered users can navigate and view blindboxes but are restricted from adding them to a collection.
 ## 🚀 WebSocket deliverable
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
