@@ -39,6 +39,10 @@ async function addBlindBox(blindBox) {
   return figureCollection.insertOne(blindBox);
 }
 
+async function removeFigure(single_figure) {
+  const figure = await figureCollection.deleteOne(single_figure);
+}
+
 async function getBlindBoxes() {
   const query = { "figure.image": { $exists: true } };
   const options = {
@@ -49,13 +53,6 @@ async function getBlindBoxes() {
   return cursor.toArray();
 }
 
-async function updateCollection(newFigure) {
-  const result = await figureCollection.insertOne(newFigure);
-  return {
-    _id: result.insertedId, 
-    ...newFigure
-  };
-}
 
 async function getCollectionFigures(token) {
   const user = await getUserByToken(token);  
@@ -72,6 +69,6 @@ module.exports = {
   updateUser,
   addBlindBox,
   getBlindBoxes,
-  updateCollection,
   getCollectionFigures,
+  removeFigure,
 };

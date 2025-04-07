@@ -60,16 +60,20 @@ const verifyAuth = async (req, res, next) => {
   }
 };
 
+
 apiRouter.get('/collection', verifyAuth, async (req, res) => {
-  const token = req.cookies.token;
-  const collection = await DB.getCollectionFigures(token);
+  const collection = await DB.getCollectionFigures(req.cookies.token);
   res.json(collection);
 });
 
 apiRouter.post('/collection', verifyAuth, async (req, res) => {
-  const newFigure = req.body;
-  const figure = await DB.updateCollection(newFigure);
+  const figure = await DB.addBlindBox(req.body);
   res.json(figure);
+});
+
+apiRouter.delete('/collection', verifyAuth, async (req, res) => {
+  const removed = await DB.removeFigure(req.params);
+  res.json(removed)
 });
 
 app.use(function (err, req, res, next) {
@@ -109,5 +113,3 @@ function setAuthCookie(res, authToken) {
 const httpService = app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-
-

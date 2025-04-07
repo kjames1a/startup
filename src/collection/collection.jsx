@@ -41,6 +41,18 @@ React.useEffect(() => {
   }
 }, [selectedBlindBox, userName]);
 
+const handleDeleteFigure = (figureId) => {
+  fetch(`/api/collection`, {
+    method: 'DELETE',
+  })
+  .then((response) => {
+    if (response.ok) {
+      setCollection((prevCollection) => prevCollection.filter(figure => figure._id !== figureId));
+    } 
+  });
+}
+
+
 return (
   <main>
     <h2 className="schoolbell-regular" style={{ textAlign: "center", marginBottom: "40px", color: "black" }}>
@@ -51,9 +63,10 @@ return (
         {collectionToDisplay.length === 0 ? (
           <p style={{ textAlign: "center", color: "gray" }}>No figures collected yet!</p>
         ) : (
-          collection.map((item, index) => (
+          collection.slice(0,5).map((item, index) => (
             <div key={index}>
               <img src={item.figure.image} alt={item.figure.name} height="200" />
+              <button onClick={() => handleDeleteFigure(item._id)}>Delete Figure</button>
             </div>
           ))
         )}
@@ -64,4 +77,3 @@ return (
     </div>
   </main>
 )};
-
