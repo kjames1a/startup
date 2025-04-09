@@ -51,3 +51,8 @@ I did not do much research on my third party and thought it implemented everythi
 
 ## Database
 When finding a MongoDB database, the property names used must match the field names defined in the schema.
+
+## Websocket
+Websocket enables the server to send notifications to the client, or for the client and server to have an asynchronous exchange of information. "Client" refers to the software (like a web browser or a mobile app) that interacts with a server. Can be used for real time chat.
+
+
