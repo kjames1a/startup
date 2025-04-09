@@ -1,0 +1,19 @@
+.handdrawn-button .btn:hover {
+  background-color: #e0d9d4;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0px black;
+}
+
+.handdrawn-button {
+  color: black;
+  background-color: #f0f0f0;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px black;
+  font-family: "Schoolbell", serif;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  height: 50px;
+}
