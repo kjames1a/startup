@@ -131,10 +131,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Restricts functionality based on authentication** - Unregistered users can navigate and view blindboxes but are restricted from adding them to a collection.
 ## 🚀 WebSocket deliverable
 
-For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+For this deliverable I used websocket to show in realtime of the users logging in. 
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - Through peerProxy.js, the backend Websocket connection is successful.
+- [x] **Frontend makes WebSocket connection** - Through the unauthenticated.jsx and about.jsx the frontend WebSocket connection is successful.
+- [x] **Data sent over WebSocket connection** - Data related to users who have logged in is successfully transmitted from the backend to the frontend.
+- [x] **WebSocket data displayed** - Websocket data is displayed on that about page.
+- [x] **Application is fully functional** - Everything in my Pop Depot application is functional!
