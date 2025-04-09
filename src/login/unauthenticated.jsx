@@ -28,15 +28,16 @@ export function Unauthenticated(props) {
     if (response?.status === 200) {
       localStorage.setItem("userName", userName);
       props.onLogin(userName);
+      if (userName && userName.trim() !== "") {
+        props.onLogin(userName);
+        LoginNotifier.broadcastEvent(userName, LoginEvent.User, {
+          userName: userName,
+          msg: `${userName} has logged in`,
+        });
+      }
     } else {
       const body = await response.json();
       setDisplayError(`⚠ Error: ${body.msg}`);
-    }
-    if (userName) {
-      LoginNotifier.broadcastEvent(userName, LoginEvent.User, {
-        userName: userName,
-        msg: `${userName} has logged in`,
-      });
     }
   }
 
@@ -54,7 +55,13 @@ export function Unauthenticated(props) {
           />
         </div>
         <div className="input-group mb-3">
-          <span className="input-group-text">🔒</span>
+          <span className="input-group-text">
+            <img
+              src="/lock.png"
+              alt="lock icon"
+              style={{ width: "1em", height: "1.5em" }}
+            />
+          </span>
           <input
             className="form-control"
             type="password"
@@ -65,7 +72,7 @@ export function Unauthenticated(props) {
         <Button
           className="handdrawn-button"
           style={{ marginRight: "50px" }}
-          variant="primary"
+          variant="secondary"
           onClick={() => loginUser()}
           disabled={!userName || !password}
         >
