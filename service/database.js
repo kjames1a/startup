@@ -39,9 +39,10 @@ async function addBlindBox(blindBox) {
   return figureCollection.insertOne(blindBox);
 }
 
-async function removeFigure(single_figure) {
-  const figure = await figureCollection.deleteOne(single_figure);
+async function removeFigure(singleFigure) {
+  const figure = await figureCollection.deleteOne(singleFigure);
 }
+
 
 async function getBlindBoxes() {
   const query = { "figure.image": { $exists: true } };
